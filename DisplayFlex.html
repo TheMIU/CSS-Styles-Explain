@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display: flex;</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <style>
+        /*all formatting*/
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        p {
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #flex_item_pro {
+            background-color: #fd4040;
+        }
+
+        #flex_container_pro {
+            background-color: #18215d;
+        }
+
+
+        body > section {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        body > section > section:nth-child(1) {
+            background: #d5fff0;
+        }
+
+        body > section > section:nth-child(2) {
+            background: #fffcd5;
+        }
+
+        body > section > section > section {
+            display: flex;
+        }
+
+        body section:nth-child(2) {
+            margin-bottom: 20px;
+        }
+
+        section div:nth-child(1) {
+            background-color: #3164ff;
+        }
+
+        section div:nth-child(2) {
+            background-color: rgba(255, 187, 0, 0.8);
+        }
+
+        section div:nth-child(3) {
+            background-color: rgba(255, 37, 58, 0.8);
+        }
+
+        section div:nth-child(4) {
+            background-color: lightseagreen;
+        }
+
+        section div:nth-child(5) {
+            background-color: lightslategray;
+        }
+
+        section div:nth-child(6) {
+            background-color: hotpink;
+        }
+
+        i {
+            margin-left: 20px;
+            font-size: 15px;
+            color: rgb(80, 7, 175);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        h1::before {
+            content: "◼ ";
+        }
+
+        h3::before {
+            content: "▪ ";
+        }
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 35px;
+            font-size: 15px;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: #c9d0cc solid 2px;
+            background: white;
+            width: 100px;
+            margin-left: 20px;
+            font-size: 12px;
+        }
+
+        b {
+            color: blue;
+        }
+
+        body > section > section > section {
+            margin-left: 50px;
+        }
+
+        body > section > section > section > section {
+            margin-left: 20px;
+            border: #333333 solid 2px;
+            background: white;
+            height: 100px;
+            width: 100px;
+        }
+
+        div {
+            border: #333333 solid 1px;
+            height: 20px;
+            width: 20px;
+        }
+
+        body > section > section > section > section > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-weight: bold;
+        }
+
+        /*=================== align-items: ==============================*/
+        #container1 {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #container2 {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #container3 {
+            display: flex;
+            align-items: center;
+        }
+
+        /*===================  justify-content: ==============================*/
+        #container4 {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        #container5 {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #container6 {
+            display: flex;
+            justify-content: center;
+        }
+
+        #container7 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #container701 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #container702 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*===================  flex-direction: ==============================*/
+        #container8 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #container9 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        #container10 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #container11 {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        /********************************************************/
+        #container12, #container13, #container14, #container15, #container16, #container17, #container18 {
+            display: flex;
+        }
+
+        /*#container12*/
+        #container12 div:nth-child(1) {
+            flex-grow: 0;
+        }
+
+        #container12 div:nth-child(2) {
+            flex-grow: 5;
+        }
+
+        #container12 div:nth-child(3) {
+            flex-grow: 1;
+        }
+
+        /*#container13*/
+        #container13 div:nth-child(1) {
+            flex-grow: 1;
+        }
+
+        #container13 div:nth-child(2) {
+            flex-grow: 3;
+        }
+
+        #container13 div:nth-child(3) {
+            flex-grow: 10;
+        }
+
+
+        /*align-self:*/
+
+        #container14 div {
+            align-self: flex-start;
+        }
+
+        #container15 div {
+            align-self: flex-end;
+        }
+
+        #container16 div {
+            align-self: center;
+        }
+
+
+        #container17 div {
+            flex-shrink: 1;
+        }
+
+        #container18 div {
+            flex-shrink: 0;
+        }
+
+        /*=============flex-wrap==============*/
+        #container19 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #container19 div {
+            flex-shrink: 0;
+        }
+
+        /*=============order==============*/
+        #container20 {
+            display: flex;
+        }
+
+        #container20 div:nth-child(1) {
+            order: 3;
+        }
+
+        #container20 div:nth-child(2) {
+            order: 1;
+        }
+
+        #container20 div:nth-child(3) {
+            order: 2;
+        }
+
+        /********** home button *************/
+        #home{
+            background: rgba(49, 44, 44, 0.62);
+            border: 2px white solid;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(0deg);
+            transition: 1s;
+        }
+
+        #home a{
+            opacity: 255;
+            text-decoration: none;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        #home:hover{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+
+            transform: rotate(5deg);
+            transition: 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+<section>
+    <section>
+        <p id="flex_container_pro">Flex Container Properties</p>
+
+        <h1>display: flex;</h1>
+        <br>
+        <h1>align-items: <br>
+            <i> y-axis (cross-axis) </i>
+        </h1>
+
+        <section>
+            <h2>flex-start</h2>
+            <h2>flex-end</h2>
+            <h2>center</h2>
+        </section>
+
+        <section>
+            <section id="container1">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container2">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container3">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+
+
+        <h1>justify-content: <br>
+            <i> x-axis (main-axis)</i>
+        </h1>
+
+        <section>
+            <h2>flex-start</h2>
+            <h2>flex-end</h2>
+            <h2>center</h2>
+        </section>
+
+        <section>
+            <section id="container4">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container5">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container6">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+
+        <section>
+            <h2>space-evenly</h2>
+            <h2>space-around</h2>
+            <h2>space-between</h2>
+        </section>
+
+        <section>
+            <section id="container7">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container701">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container702">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+        </section>
+
+        <h1>flex-direction:</h1>
+
+        <section>
+            <h2>row</h2>
+            <h2>row-reverse</h2>
+            <h2>column</h2>
+            <h2>column-reverse</h2>
+        </section>
+
+        <section>
+            <section id="container8">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </section>
+
+            <section id="container9">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </section>
+
+            <section id="container10">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </section>
+
+            <section id="container11">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </section>
+
+        </section>
+    </section>
+
+    <!--******************************************************-->
+    <section>
+        <p id="flex_item_pro">Flex Item Properties</p>
+
+
+        <h1>display: flex; <b>(for container)</b></h1>
+        <br>
+        <h1><b>for items ⬇</b></h1>
+
+        <h3>flex-grow:</h3>
+
+        <section>
+            <section id="container12">
+                <div>0</div>
+                <div>5</div>
+                <div>1</div>
+            </section>
+
+            <section id="container13">
+                <div>1</div>
+                <div>3</div>
+                <div>10</div>
+            </section>
+        </section>
+
+        <h3>align-self:</h3>
+
+        <section>
+            <h2>flex-start</h2>
+            <h2>flex-end</h2>
+            <h2>center</h2>
+        </section>
+
+        <section>
+            <section id="container14">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container15">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container16">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+        </section>
+
+
+        <h3>  order: </h3>
+
+        <section>
+
+            <section id="container20">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+            </section>
+        </section>
+
+        <br>
+        <h3> flex-shrink:</h3>
+
+        <section>
+            <h2>1 (default)</h2>
+            <h2>0</h2>
+        </section>
+
+        <section>
+            <section id="container17">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+            <section id="container18">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
+        </section>
+
+        <h3> <b>for item ➡ </b>flex-shrink:0;
+            &nbsp;&nbsp;<b>for container ➡ </b> flex-wrap: wrap;</h3>
+        <section>
+
+            <section id="container19">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+
+    </section>
+</section>
+
+<div id="home">
+    <a href="index.html">🐶</a>
+</div>
+
+</body>
+</html>

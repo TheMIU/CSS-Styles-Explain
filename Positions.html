@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position: </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="assets/css/normalize.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            font-size: 50px;
+            font-weight: lighter;
+            opacity: 20%;
+        }
+
+        body > div {
+            z-index: 1;
+
+            height: 100px;
+            width: 100px;
+            border: black solid 5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ============ top grid ============  */
+        section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        section > div {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        section > div:nth-child(1) {
+            background: #7b97ff;
+        }
+
+        section > div:nth-child(2) {
+            background: #a8fd40;
+        }
+
+        section > div:nth-child(3) {
+            background: orange;
+        }
+
+        section > div:nth-child(4) {
+            background: violet;
+        }
+
+        section > div:nth-child(5) {
+            background: darksalmon;
+        }
+
+        /* ============ positions ============  */
+
+        #static_box {
+            position: static; /* by default */
+
+            background: #7b97ff;
+        }
+
+        #relative_box {
+            position: relative;
+            top: -10px;
+            left: 200px;
+
+            background: #a8fd40;
+        }
+
+        #absolute_box {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            background: orange;
+        }
+
+        #fixed_box {
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+
+            background: violet;
+        }
+
+        .sticky_boxes {
+            position: sticky;
+            top: 100px;
+            left: 100px;
+
+            background: darksalmon;
+        }
+
+        /********** home button *************/
+        #home{
+            background: rgba(49, 44, 44, 0.62);
+            border: 2px white solid;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(0deg);
+            transition: 1s;
+        }
+
+        #home a{
+            opacity: 255;
+            text-decoration: none;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        #home:hover{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+
+            transform: rotate(5deg);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+<section>
+    <div>
+        <code>
+            position: static;<br>
+            /* by default */
+        </code>
+    </div>
+
+    <div>
+        <code>
+            position: relative;<br>
+            top: -10px;<br>
+            left: 200px;<br>
+        </code>
+    </div>
+
+    <div>
+        <code>
+            position: absolute;<br>
+            left: 0;<br>
+            right: 0;<br>
+            top: 0;<br>
+            bottom: 0;<br>
+            margin: auto;<br>
+        </code>
+    </div>
+
+    <div>
+        <code>
+            position: fixed;<br>
+            bottom: 100px;<br>
+            right: 100px;<br>
+        </code>
+    </div>
+
+    <div>
+        <code>
+            position: sticky;<br>
+            top: 100px;<br>
+            left: 100px;<br>
+        </code>
+    </div>
+</section>
+
+<div id="static_box">static</div>
+
+<div id="relative_box">relative</div>
+
+<div id="absolute_box">absolute</div>
+
+<div id="fixed_box">fixed</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<div class="sticky_boxes">sticky 1</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<div class="sticky_boxes">sticky 2</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<div class="sticky_boxes">sticky 3</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<div class="sticky_boxes">sticky 4</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<div class="sticky_boxes">sticky 4</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Consectetur dolores facilis hic inventore iure minima nemo,
+    officiis provident quae quidem quis recusandae repellat
+    reprehenderit rerum saepe suscipit unde vero voluptates.</p>
+
+<div id="home">
+    <a href="index.html">🐶</a>
+</div>
+
+</body>
+</html>

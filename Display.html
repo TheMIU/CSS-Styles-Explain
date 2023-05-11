@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display: </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="assets/css/normalize.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+
+        body>h1{
+            margin: 10px;
+            background: #484848;
+            color: white;
+
+            text-align: center;
+            font-size: 15px;
+            height: 20px;
+            padding: 10px;
+        }
+
+        #section1 , #section2 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 5fr;
+        }
+
+
+        section[class] {
+            background: #98acff;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        div,img {
+            height: 50px;
+            border: black solid 2px;
+            background: #ff4e4e;
+        }
+
+        img{
+
+        }
+        .none div, .none img {
+            display: none;
+        }
+
+        .inline div, .inline img {
+            display: inline;
+        }
+
+        .block div, .block img {
+            display: block;
+        }
+
+        .inline-block div, .inline-block img {
+            display: inline-block;
+        }
+
+        /********** home button *************/
+        #home{
+            background: rgba(49, 44, 44, 0.62);
+            border: 2px white solid;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(0deg);
+            transition: 1s;
+        }
+
+        #home a{
+            opacity: 255;
+            text-decoration: none;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        #home:hover{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+
+            transform: rotate(5deg);
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+<!--******************* for Block level elements ****************-->
+<h1> for block level elements (ex : &#60;div&#62;) </h1>
+
+<section id="section1">
+    <p>display: none;</p>
+    <p>display: inline;</p>
+    <p style="color: red">display: block; (default)</p>
+    <p>display: inline-block;</p>
+
+    <section class="none">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section class="inline">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section class="block">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section class="inline-block">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</section>
+
+<br>
+<!--******************* for Inline elements ****************-->
+<h1> for inline elements (ex : &#60;img&#62;)</h1>
+
+<section id="section2">
+    <p>display: none;</p>
+    <p style="color: red">display: inline; (default)</p>
+    <p>display: block;</p>
+    <p>display: inline-block;</p>
+
+    <section class="none">
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+    </section>
+
+    <section class="inline">
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+    </section>
+
+    <section class="block">
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+    </section>
+
+    <section class="inline-block">
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+        <img src="assets/img/img.png" alt="image"></img>
+    </section>
+</section>
+
+<div id="home">
+    <a href="index.html">🐶</a>
+</div>
+</body>
+</html>
