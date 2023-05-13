@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display: grid;</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <style>
+        /*all font formatting*/
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /********** home button *************/
+        #home {
+            background: rgba(49, 44, 44, 0.62);
+            border: 2px white solid;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(0deg);
+            transition: 1s;
+        }
+
+        #home a {
+            opacity: 255;
+            text-decoration: none;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        #home:hover {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+
+            transform: rotate(5deg);
+            transition: 0.5s;
+        }
+
+        /***********************/
+        aside{
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+
+            background: #afbfff;
+        }
+
+        code{
+            margin-left: 20px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 0.5fr 2fr 0.5fr 2fr;
+        }
+
+        div {
+            background: #98acff;
+            border: black solid 1px;
+        }
+
+        section > section {
+            margin: 10px;
+            height: 150px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+
+            border: black solid 1px;
+            background: #18215d;
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: -80px;
+            font-size: 15px;
+
+            text-align: center;
+        }
+
+
+
+        #grid1 {
+            grid-column-gap: 10px;
+        }
+
+        #grid2 {
+            grid-row-gap: 10px;
+        }
+
+        #grid3 {
+            grid-gap: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<aside>
+    <code>
+        display: grid;<br>
+        grid-template-columns: 1fr 1fr 1fr;<br>
+        grid-template-rows: 0.5fr 2fr 0.5fr 2fr;<br>
+    </code>
+    <h1>or</h1>
+    <code>
+        display: grid;<br>
+        grid-template-columns: repeat(3, 1fr);<br>
+        grid-template-rows: 0.5fr 2fr 0.5fr 2fr;<br>
+    </code>
+</aside>
+
+<section>
+    <h1>grid-column-gap: 10px;</h1>
+    <h1>grid-row-gap: 10px;</h1>
+    <h1>grid-gap: 10px;</h1>
+
+    <section id="grid1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section id="grid2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+
+    <section id="grid3">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+</section>
+
+<div id="home">
+    <a href="index.html">🐶</a>
+</div>
+
+</body>
+</html>
