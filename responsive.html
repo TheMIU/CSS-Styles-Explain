@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position: </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+
+    <!--must include for responsive-->
+    <meta content="width=device-width initial-scale=1" name="viewport">
+
+    <style>
+        /*default styles*/
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        /*Laptop L= 1440*/
+        @media (width: 1440px) {
+            h1:nth-child(1) {
+                display: block;
+            }
+        }
+
+        /*Laptop= 1024*/
+        @media (width: 1024px) {
+            h1:nth-child(2) {
+                display: block;
+            }
+        }
+
+        /*Tablet= 768*/
+        @media (width: 768px) {
+            h1:nth-child(3) {
+                display: block;
+            }
+        }
+
+        /*Mobile L= 425*/
+        @media (width: 425px) {
+            h1:nth-child(4) {
+                display: block;
+            }
+        }
+
+        /*Mobile M= 375*/
+        @media (width: 375px) {
+            h1:nth-child(5) {
+                display: block;
+            }
+        }
+
+        /*Mobile S= 320*/
+        @media (width: 320px) {
+            h1:nth-child(6) {
+                display: block;
+            }
+        }
+
+
+        /********** home button *************/
+        #home {
+            background: rgba(49, 44, 44, 0.62);
+            border: 2px white solid;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(0deg);
+            transition: 1s;
+        }
+
+        #home a {
+            opacity: 255;
+            text-decoration: none;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        #home:hover {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+
+            transform: rotate(5deg);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Laptop Large 1440px</h1>
+<h1>Laptop Small 1024px</h1>
+<h1>Tablet 768px</h1>
+<h1>Mobile Large 425</h1>
+<h1>Mobile Medium 375</h1>
+<h1>Mobile Small 320px</h1>
+
+<div id="home">
+    <a href="index.html">🐶</a>
+</div>
+
+</body>
+</html>
