@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display: flex;</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common-styles.css">
+
+    <style>
+        .container-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: lightblue;
+        }
+
+        .container-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5px;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: lightgreen;
+        }
+
+        .item {
+            width: 100px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<h2>Flex Container</h2>
+<div class="container-flex">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+</div>
+
+<h2>Grid Container</h2>
+<div class="container-grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+</div>
+
+<div id="home">
+    <a href="index.html">🐶</a>
+</div>
+
+</body>
+</html>
